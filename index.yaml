@@ -1,6 +1,32 @@
 apiVersion: v1
 entries:
   ruby-on-rails:
+  - annotations:
+      artifacthub.io/license: MIT License
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/MatthewKennedy/helm-charts
+    apiVersion: v2
+    created: "2024-05-29T15:19:21.129928057Z"
+    description: 'A helm chart for running a ruby-on-rails applications.  This chart
+      runs a kubernetes deployment, service, hpa, ingress, job & cron job. '
+    digest: f581cd16a53d947e42d1e93035ac5966ec99bebcd8e5063537e8a9c1183168d3
+    home: https://github.com/MatthewKennedy/helm-charts
+    keywords:
+    - ruby-on-rails
+    - ruby
+    - rails
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: m.kennedy@me.com
+      name: Matthew Kennedy
+    name: ruby-on-rails
+    sources:
+    - https://github.com/MatthewKennedy/helm-charts
+    type: application
+    urls:
+    - https://github.com/MatthewKennedy/helm-charts/releases/download/ruby-on-rails-0.0.7/ruby-on-rails-0.0.7.tgz
+    version: 0.0.7
   - apiVersion: v2
     created: "2024-05-29T15:12:05.836456905Z"
     digest: 17deccb7a12ef80e95bb823f443eaefabf7543f6bae025ebdea8dd41a05bf5e3
@@ -9,4 +35,4 @@ entries:
     urls:
     - https://github.com/MatthewKennedy/helm-charts/releases/download/ruby-on-rails-0.0.6/ruby-on-rails-0.0.6.tgz
     version: 0.0.6
-generated: "2024-05-29T15:12:05.836462766Z"
+generated: "2024-05-29T15:19:21.12993485Z"
