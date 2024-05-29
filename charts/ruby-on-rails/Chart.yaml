@@ -1,4 +1,30 @@
 apiVersion: v2
 name: ruby-on-rails
 type: application
+version: 0.0.7
+
+apiVersion: v2
+name: ruby-on-rails
 version: 0.0.6
+description: |
+  A helm chart for running a ruby-on-rails applications.
+
+  This chart runs a kubernetes deployment, service, hpa, ingress, job & cron job.
+
+type: application
+maintainers:
+  - name: Matthew Kennedy
+    email: m.kennedy@me.com
+sources:
+  - https://github.com/MatthewKennedy/helm-charts
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/MatthewKennedy/helm-charts
+keywords:
+  - ruby-on-rails
+  - ruby
+  - rails
+annotations:
+  "artifacthub.io/license": MIT License
+  "artifacthub.io/links": |
+    - name: Chart Source
+      url: https://github.com/MatthewKennedy/helm-charts
