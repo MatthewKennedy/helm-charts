@@ -13,20 +13,20 @@ spec:
         metadata:
           {{- with .Values.pod.annotations }}
           annotations:
-            {{- toYaml . | nindent 10 }}
+            {{- toYaml . | nindent 14 }}
           {{- end }}
           labels:
-            {{- include "application.labels" . | nindent 10 }}
+            {{- include "application.labels" . | nindent 12 }}
         spec:
           restartPolicy: Never
           serviceAccountName: {{ include "application.fullname" . }}
           {{- with .Values.imagePullSecrets }}
           imagePullSecrets:
-            {{- toYaml . | nindent 10 }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.podSecurityContext }}
           securityContext:
-            {{- toYaml . | nindent 10 }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           containers:
             - name: {{ include "application.fullname" . }}
@@ -37,14 +37,14 @@ spec:
                     name: {{ include "application.fullname" . }}
               {{- with .Values.cron_job.command }}
               command:
-                {{- toYaml . | nindent 14 }}
+                {{- toYaml . | nindent 16 }}
               {{- end }}
               {{- with .Values.cron_job.args }}
               args:
-                {{- toYaml . | nindent 14 }}
+                {{- toYaml . | nindent 16 }}
               {{- end }}
               {{- with .Values.securityContext }}
               securityContext:
-                {{- toYaml . | nindent 14 }}
+                {{- toYaml . | nindent 16 }}
               {{- end }}
 {{- end }}
