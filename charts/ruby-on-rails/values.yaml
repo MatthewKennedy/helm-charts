@@ -7,12 +7,8 @@ image:
   repository:
   tag:
 
-command:
-  - bundle
-args:
-  - exec
-  - rails
-  - server
+command: []
+args: []
 
 envs: []
 port:
@@ -33,7 +29,7 @@ replicas:
   targetCPUUtilizationPercentage:
 
 # Service port for internal communication
-svcPort: 80
+svcPort: 3000
 
 ingress:
   annotations: {}
@@ -51,19 +47,10 @@ pod:
 # Job Setup
 job:
   enabled: false
-  command:
-    - bundle
-    - exec
-  args:
-    - rake
-    - -T
+  command: []
+  args: []
 
 cron_job:
   enabled: false
-  command:
-    - bundle
-    - exec
-  args:
-    - rake
-    - -T
-
+  command: []
+  args: []
